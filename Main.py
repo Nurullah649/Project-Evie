@@ -1,11 +1,15 @@
 from playsound import playsound
 from gtts import gTTS
 import speech_recognition as sr
+import calendar
+import date_information
 r=sr.Recognizer()
 
 def response(voice):
     if "sesimi alıyor musun" in voice:
         speak("Evet Alıyorum Nurullah")
+    if "bugün" and "tarih" in voice:
+        speak(date_information.tarih_str)
 def record(ask = False):
     with sr.Microphone() as source:
         if ask:
