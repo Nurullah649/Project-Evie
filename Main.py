@@ -3,9 +3,7 @@ from gtts import gTTS
 import speech_recognition as sr
 import date_information
 from googletrans import Translator
-
 r = sr.Recognizer()
-
 def translate_text(text, target_language='en'):
     translator = Translator()
     translated = translator.translate(text, dest=target_language)
