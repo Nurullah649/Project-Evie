@@ -9,6 +9,8 @@ def response(voice):
         speak("Evet Alıyorum Nurullah")
     if "bugün" and "tarih" in voice:
         speak(date_information.tarih_str)
+    elif "bugün" and "tarih" and "günü" in voice:
+        speak(date_information.day_tarih_str)
 def record(ask = False):
     with sr.Microphone() as source:
         if ask:
